@@ -1,21 +1,22 @@
-const Home = () => {
-    const handleClick = (e) => {
-        console.log("Hello world", e);
-    };
+// useState hook: allows for a dynamic, reactive value
+import { useState } from "react";
 
-    const handleClickAgain = (name, e) => {
-        console.log(`Hello ${name}`, e.target);
+const Home = () => {
+    // [initial value, function to rerender component]
+    const [name, setName] = useState("Superman");
+    const [age, setAge] = useState(33);
+
+    const handleClick = () => {
+        setName("Batman");
+        setAge(32);
     };
 
     return (
         <div className="home">
             <h2>Homepage</h2>
-            {/* Pass a reference to a function without invoking it */}
+            <p>President: {name}</p>
+            <p>Age: {age} years old.</p>
             <button onClick={handleClick}>Click Me</button>
-            {/* Pass an argument using an anonymous function */}
-            <button onClick={(e) => handleClickAgain("Superman", e)}>
-                Click Me Again
-            </button>
         </div>
     );
 };
