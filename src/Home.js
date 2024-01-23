@@ -25,10 +25,19 @@ const Home = () => {
         },
     ]);
 
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter((blog) => blog.id != id);
+        setBlogs(newBlogs);
+    };
+
     return (
         <div className="home">
             {/* Props to make blogs data available to BlogList.js component */}
-            <BlogList blogsProp={blogs} titleProp="All Blogs" />
+            <BlogList
+                blogsProp={blogs}
+                titleProp="All Blogs"
+                handleDeleteProp={handleDelete}
+            />
         </div>
     );
 };
