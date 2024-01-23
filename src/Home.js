@@ -32,11 +32,11 @@ const Home = () => {
 
     return (
         <div className="home">
-            {/* Props to make blogs data available to BlogList.js component */}
+            {/* Props for blogs data & delete functionality used in BlogList component */}
             <BlogList
-                blogsProp={blogs}
-                titleProp="All Blogs"
-                handleDeleteProp={handleDelete}
+                blogs={blogs}
+                title="All Blogs"
+                handleDelete={handleDelete}
             />
         </div>
     );

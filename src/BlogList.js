@@ -1,9 +1,5 @@
-const BlogList = (props) => {
-    // Props data passed in from Home.js
-    const blogs = props.blogsProp;
-    const title = props.titleProp;
-    const handleDelete = props.handleDeleteProp;
-
+// Props data passed in from Home.js
+const BlogList = ({ blogs, title, handleDelete }) => {
     return (
         <div className="blog-list">
             <h2>{title}</h2>
