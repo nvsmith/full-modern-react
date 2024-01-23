@@ -1,5 +1,6 @@
 // useState hook: allows for a dynamic, reactive value
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Home = () => {
     // [initial value, function to rerender component]
@@ -26,12 +27,8 @@ const Home = () => {
 
     return (
         <div className="home">
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>Written by {blog.author}</p>
-                </div>
-            ))}
+            {/* Props to make blogs data available to BlogList.js component */}
+            <BlogList blogsProp={blogs} titleProp="All Blogs" />
         </div>
     );
 };
