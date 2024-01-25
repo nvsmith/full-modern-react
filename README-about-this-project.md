@@ -1,8 +1,8 @@
 # About This Project
 
-This **README-project.md** document is specific to this particular project.
+This document is specific to this project.
 
-(This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Read more about this app in the other, auto-generated README file.)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). (Read more about this app in the other, auto-generated README file.)
 
 ## Spinning Up A Quick Backend
 
