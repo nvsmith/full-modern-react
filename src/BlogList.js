@@ -1,3 +1,5 @@
+// Component template to list all blogs
+
 // Props data passed in from Home.js
 const BlogList = ({ blogs, title }) => {
     return (
