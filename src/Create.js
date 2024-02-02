@@ -5,13 +5,27 @@ const Create = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [author, setAuthor] = useState("Oracle");
+    const [isPending, setIsPending] = useState(false);
 
     const handleSubmit = (e) => {
         // Prevent page refresh on submit
         e.preventDefault();
-
         const blog = { title, body, author };
-        console.log(blog);
+
+        setIsPending(true);
+
+        // Send blog to server
+        // Timeout to view pending state during testing; remove if desired
+        setTimeout(() => {
+            fetch("http://localhost:8000/blogs", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(blog),
+            }).then(() => {
+                console.log("new blog added");
+                setIsPending(false);
+            });
+        }, 1000);
     };
 
     return (
@@ -32,7 +46,8 @@ const Create = () => {
                     <option value="Oracle">Oracle</option>
                 </select>
 
-                <button>Add Blog</button>
+                {!isPending && <button>Add Blog</button>}
+                {isPending && <button disabled>Adding...</button>}
                 {/* Output entries to document */}
                 <p>{title}</p>
                 <p>{body}</p>
