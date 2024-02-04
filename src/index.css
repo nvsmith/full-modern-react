@@ -44,7 +44,8 @@
 .blog-preview:hover {
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.blog-preview h2 {
+.blog-preview h2,
+.not-found h2 {
     font-size: 20px;
     color: #f1356d;
     margin-bottom: 8px;
@@ -101,4 +102,7 @@
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
+}
+.not-found p {
+    margin: 1rem 0 2rem;
 }
