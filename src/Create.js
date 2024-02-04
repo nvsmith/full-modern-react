@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 // sfc
 const Create = () => {
@@ -6,6 +7,7 @@ const Create = () => {
     const [body, setBody] = useState("");
     const [author, setAuthor] = useState("Oracle");
     const [isPending, setIsPending] = useState(false);
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         // Prevent page refresh on submit
@@ -24,6 +26,8 @@ const Create = () => {
             }).then(() => {
                 console.log("new blog added");
                 setIsPending(false);
+                // Send user back to Home Route
+                history.push("/");
             });
         }, 1000);
     };
