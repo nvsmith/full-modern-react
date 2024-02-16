@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/full-modern-react/static/css/main.9614e1db.css",
+    "main.js": "/full-modern-react/static/js/main.267eb62f.js",
+    "index.html": "/full-modern-react/index.html",
+    "main.9614e1db.css.map": "/full-modern-react/static/css/main.9614e1db.css.map",
+    "main.267eb62f.js.map": "/full-modern-react/static/js/main.267eb62f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9614e1db.css",
+    "static/js/main.267eb62f.js"
+  ]
+}
