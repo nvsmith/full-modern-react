@@ -4,7 +4,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). (Read more about this app in the auto-generated [README-react-app.md](README-react-app.md) document.)
 
-## Getting Started
+Node.js is required for local development.
+
+## Quickstart To See Everything in Action
+
+To view the entire completed project for development locally, you'll need to open two terminal windows for your Node.js environment. Run the following in your project root:
+
+1. `npx json-server --watch data/db.json --port 8000`
+2. `npm run start`
+
+After running the second command, your browser should automatically open the application, e.g. `http://localhost:3000/`.
+
+Open up a third, separate terminal for any development purposes; keep the first two Node instances running in the background while you work.
+
+## Getting Started With Development (Step 1)
 
 In your terminal, run `npm run start` to execute the script which starts React and allows you to view your project in the browser.
 
@@ -24,11 +37,9 @@ Note: you may need to re-run `npm run start` after starting the json server.
 
 -   #### /blogs
     -   GET - Fetch all blogs
--   #### /blogs/{id}
-    -   GET - Fetch a single blog
--   #### /blogs
     -   POST - Add a new blog
 -   #### /blogs/{id}
+    -   GET - Fetch a single blog
     -   DELETE - Delete a blog
 
 ## Testing For Fetch Errors (Step 19)
