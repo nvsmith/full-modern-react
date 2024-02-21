@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Node.js is required for local development.
 
-## Quickstart To See Everything in Action
+## Quickstart After Cloning
 
 To view the entire completed project for development locally, you'll need to open two terminal windows for your Node.js environment. Run the following in your project root:
 
@@ -16,6 +16,20 @@ To view the entire completed project for development locally, you'll need to ope
 After running the second command, your browser should automatically open the application, e.g. `http://localhost:3000/`.
 
 Open up a third, separate terminal for any development purposes; keep the first two Node instances running in the background while you work.
+
+## Getting Started with Setup
+
+1. Install `node.js` if necessary.
+2. Navigate to the directory where you want to create your project root.
+3. Run the Create React App, replacing "project-name" with your own project:
+    1. `npx create-react-app project-name`
+
+For simple projects, you can delete the following:
+
+1. src/App.test.js
+2. src/reportWebVitals.js
+    1. Open src/index.js to delete `import reportWebVitals from './reportWebVitals';` and `reportWebVitals();`.
+3. src/setupTests.js
 
 ## Getting Started With Development (Step 1)
 
